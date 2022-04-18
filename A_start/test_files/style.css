@@ -12,7 +12,7 @@ div.PSourceRunning
   top: 100px;
   width: 100px;
   height: 100px;
-  color: rgb(0, 47, 255);
+  color: rgb(0, 140, 255);
 }
 
 /*
@@ -37,7 +37,7 @@ span.PSourceCodeText
 span.PSourceCodePostfix
 {
   margin-left: 5px;
-  color: rgb(255,0,0);
+  color: rgb(9, 211, 52);
 }
 
 span.PSourceCodePostfix img
