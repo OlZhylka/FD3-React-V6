@@ -1,4 +1,6 @@
-﻿import React from 'react';
+﻿"use strict";
+
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import VotesBlock from './components/VotesBlock';
@@ -8,8 +10,12 @@ let answersArr=require('./answers.json');
 let defaultFreeAnswerText="???";
 
 ReactDOM.render(
-  React.createElement(VotesBlock,{question:questionText,answers:answersArr,
-    deffreeanswertext: defaultFreeAnswerText,startWorkMode:1}), 
-  document.getElementById('container') 
+  <VotesBlock 
+    question={questionText}
+    answers={answersArr}
+    deffreeanswertext={defaultFreeAnswerText}
+    startWorkMode={1}
+  />
+  , document.getElementById('container') 
 );
 

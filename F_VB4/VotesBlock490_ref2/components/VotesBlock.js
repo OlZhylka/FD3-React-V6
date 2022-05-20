@@ -26,7 +26,6 @@ class VotesBlock extends React.Component {
     selectedAnswerCode: null,
     freeanswertext:this.props.deffreeanswertext,
     workMode:this.props.startWorkMode,
-    visibleQuestionNum: 1,
   }
 
   answerSelected = (code) => {
@@ -50,14 +49,6 @@ class VotesBlock extends React.Component {
     this.setState( {freeanswertext:fat} );
   }
 
-  showRedQuestion = () => {
-    this.setState({visibleQuestionNum:1});
-  };
-
-  showBlueQuestion = () => {
-    this.setState({visibleQuestionNum:2});
-  };
-  
   render() {
 
     var answersCode=this.props.answers.map( v =>
@@ -73,16 +64,7 @@ class VotesBlock extends React.Component {
 
     return (
       <div className='VotesBlock'>
-        <input type="button" value="красный" onClick={this.showRedQuestion} />
-        <input type="button" value="синий" onClick={this.showBlueQuestion} />
-        {
-          (this.state.visibleQuestionNum==1) &&
-          <VotesQuestion key={1} question={this.props.question} auxClassName="VotesQuestionRed" />
-        }
-        {
-          (this.state.visibleQuestionNum==2) &&
-          <VotesQuestion key={2} question={this.props.question} auxClassName="VotesQuestionBlue" />
-        }
+        <VotesQuestion question={this.props.question}/>
         <div className='Answers'>{answersCode}</div>
         {
           ((this.state.workMode==1)&&this.state.selectedAnswerCode) &&

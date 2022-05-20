@@ -1,21 +1,21 @@
 ﻿import React from 'react';
 
-function withColorBackground(color) {
-    return function(Component) {
-      return props => (
-        <div style={{backgroundColor:color}}>
-          <Component {...props} />
-        </div>
-      );
-    };
-}
+// вариант с возвратом классового компонента
+// function withColorBackground(color) {
+//     return function(Comp) {
+//       return props => (
+//         <div style={{backgroundColor:color,border:"solid red 1px"}}>
+//           <Comp {...props} />
+//         </div>
+//       );
+//     };
+// }
 
-/*
-let withColorBackground = color => Component => props =>
-    <div style={{backgroundColor:color}}>
-      <Component {...props} />
+// вариант с возвратом функционального компонента
+let withColorBackground = color => Comp => props =>
+    <div style={{backgroundColor:color,border:"solid red 1px"}}>
+      <Comp {...props} />
     </div>
 ;
-*/
 
 export { withColorBackground };
