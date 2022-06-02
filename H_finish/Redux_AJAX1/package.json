@@ -1,7 +1,7 @@
 {
-  "name": "mobile",
+  "name": "reduxdemo2",
   "version": "1.0.0",
-  "description": "мобильная компания",
+  "description": "Redux demo 2",
   "main": "App.js",
   "scripts": {
     "build": ".\\node_modules\\.bin\\webpack",
@@ -12,7 +12,6 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -25,6 +24,8 @@
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.0",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2"
   }
 }
